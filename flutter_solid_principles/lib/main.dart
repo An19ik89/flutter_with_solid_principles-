@@ -1,11 +1,17 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_solid_principles/principle_name/dependencyInversion_title.dart';
-import 'package:flutter_solid_principles/principle_name/interfaceSegregation_title.dart';
-import 'package:flutter_solid_principles/principle_name/liskovSubstitution_title.dart';
-import 'package:flutter_solid_principles/principle_name/openclose_title.dart';
+import 'package:flutter_solid_principles/principle_name/title/dependencyInversion_title.dart';
+import 'package:flutter_solid_principles/principle_name/title/interfaceSegregation_title.dart';
+import 'package:flutter_solid_principles/principle_name/title/liskovSubstitution_title.dart';
+import 'package:flutter_solid_principles/principle_name/title/openclose_title.dart';
 import 'package:flutter_solid_principles/principle_name/show_principle.dart';
-import 'package:flutter_solid_principles/principle_name/singleResponsibility_title.dart';
+import 'package:flutter_solid_principles/principle_name/title/singleResponsibility_title.dart';
+import 'package:flutter_solid_principles/route/navigation/dinavigation.dart';
+import 'package:flutter_solid_principles/route/navigation/isnavigation.dart';
+import 'package:flutter_solid_principles/route/navigation/lsnavigation.dart';
+import 'package:flutter_solid_principles/route/navigation/ocnavigation.dart';
+import 'package:flutter_solid_principles/route/navigation/srnavigation.dart';
+import 'package:flutter_solid_principles/route/routeManager.dart';
 
 
 void main() {
@@ -44,8 +50,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   ShowPrincipleName principle = ShowPrincipleName();
 
+
   @override
   Widget build(BuildContext context) {
+    RouteManager routeManager = RouteManager(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -57,29 +65,19 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-                onPressed: (){
-
-                }, child: principle.showPrinciple(SingleResponsibility())),
+                onPressed: ()=> routeManager.navigateTo(SRNavigation()), child: principle.showPrinciple(SingleResponsibility())),
             const SizedBox(height: 10.0,),
             ElevatedButton(
-                onPressed: (){
-
-                }, child: principle.showPrinciple(OpenClose())),
+                onPressed: () => routeManager.navigateTo(OCNavigation()), child: principle.showPrinciple(OpenClose())),
             const SizedBox(height: 10.0,),
             ElevatedButton(
-                onPressed: (){
-
-                }, child: principle.showPrinciple(LiskovSubstitution())),
+                onPressed: ()=>routeManager.navigateTo(LSNavigation()), child: principle.showPrinciple(LiskovSubstitution())),
             const SizedBox(height: 10.0,),
             ElevatedButton(
-                onPressed: (){
-
-                }, child: principle.showPrinciple(InterfaceSegregation())),
+                onPressed: ()=>routeManager.navigateTo(ISNavigation()), child: principle.showPrinciple(InterfaceSegregation())),
             const SizedBox(height: 10.0,),
             ElevatedButton(
-                onPressed: (){
-
-                }, child: principle.showPrinciple(DependencyInversion())),
+                onPressed: ()=>routeManager.navigateTo(DINavigation()), child: principle.showPrinciple(DependencyInversion())),
             const SizedBox(height: 10.0,),
 
           ],
@@ -90,6 +88,21 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 
+
+
+
+// class LSNavigation extends Routing{
+//   @override
+//   navigation(context) =>   Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondRoute()));
+// }
+// class ISNavigation extends Routing{
+//   @override
+//   navigation(context) =>   Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondRoute()));
+// }
+// class DINavigation extends Routing{
+//   @override
+//   navigation(context) =>   Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondRoute()));
+// }
 
 
 
