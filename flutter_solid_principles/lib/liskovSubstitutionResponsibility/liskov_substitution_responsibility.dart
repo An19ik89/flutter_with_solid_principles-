@@ -14,7 +14,7 @@ class _LiskovSubstitutionResponsibilityPageState extends State<LiskovSubstitutio
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text("LS"),
+          title: const FittedBox(fit: BoxFit.contain,child: Text("Liskov Substitution Responsibility")),
         ),
         body: const Column(
           mainAxisAlignment: MainAxisAlignment.center,

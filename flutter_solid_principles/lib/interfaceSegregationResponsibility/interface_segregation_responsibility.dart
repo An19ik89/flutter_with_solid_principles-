@@ -14,7 +14,7 @@ class _InterfaceSegregationResponsibilityPageState extends State<InterfaceSegreg
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text("IS"),
+          title: const FittedBox(fit: BoxFit.contain,child: Text("Interface Segregation Responsibility")),
         ),
         body: const Column(
           mainAxisAlignment: MainAxisAlignment.center,

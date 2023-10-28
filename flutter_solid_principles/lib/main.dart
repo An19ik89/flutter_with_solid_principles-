@@ -20,6 +20,34 @@ void main() {
   // vehicleMileageCalculator.showMileage(Car());
   // vehicleMileageCalculator.showMileage(Truck());
 }
+// class VehicleMileageCalculator{
+//  void showMileage(Vehicle vehicle){
+//    if (kDebugMode) {
+//      print("${vehicle.getVehicleName()}'s Mileage : ${vehicle.getMileage()}");
+//    }
+//  }
+// }
+//
+// abstract class Vehicle{
+//   String getMileage();
+//   String getVehicleName();
+// }
+// class Car extends Vehicle{
+//
+//   @override
+//   String getVehicleName() => "Car";
+//
+//   @override
+//   String getMileage() => "90 km/l";
+// }
+// class Truck extends Vehicle{
+//
+//   @override
+//   String getVehicleName() => "Truck";
+//
+//   @override
+//   String getMileage() => "40 km/l";
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -65,79 +93,23 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-                onPressed: ()=> routeManager.navigateTo(SRNavigation()), child: principle.showPrinciple(SingleResponsibility())),
+                onPressed: ()=> routeManager.navigateTo(SRNavigation()), child: principle.showPrincipleName(SingleResponsibility())),
             const SizedBox(height: 10.0,),
             ElevatedButton(
-                onPressed: () => routeManager.navigateTo(OCNavigation()), child: principle.showPrinciple(OpenClose())),
+                onPressed: () => routeManager.navigateTo(OCNavigation()), child: principle.showPrincipleName(OpenClose())),
             const SizedBox(height: 10.0,),
             ElevatedButton(
-                onPressed: ()=>routeManager.navigateTo(LSNavigation()), child: principle.showPrinciple(LiskovSubstitution())),
+                onPressed: ()=>routeManager.navigateTo(LSNavigation()), child: principle.showPrincipleName(LiskovSubstitution())),
             const SizedBox(height: 10.0,),
             ElevatedButton(
-                onPressed: ()=>routeManager.navigateTo(ISNavigation()), child: principle.showPrinciple(InterfaceSegregation())),
+                onPressed: ()=>routeManager.navigateTo(ISNavigation()), child: principle.showPrincipleName(InterfaceSegregation())),
             const SizedBox(height: 10.0,),
             ElevatedButton(
-                onPressed: ()=>routeManager.navigateTo(DINavigation()), child: principle.showPrinciple(DependencyInversion())),
+                onPressed: ()=>routeManager.navigateTo(DINavigation()), child: principle.showPrincipleName(DependencyInversion())),
             const SizedBox(height: 10.0,),
-
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
-
-
-
-
-
-// class LSNavigation extends Routing{
-//   @override
-//   navigation(context) =>   Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondRoute()));
-// }
-// class ISNavigation extends Routing{
-//   @override
-//   navigation(context) =>   Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondRoute()));
-// }
-// class DINavigation extends Routing{
-//   @override
-//   navigation(context) =>   Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondRoute()));
-// }
-
-
-
-
-
-
-
-
-
-
-// class VehicleMileageCalculator{
-//  void showMileage(Vehicle vehicle){
-//    if (kDebugMode) {
-//      print("${vehicle.getVehicleName()}'s Mileage : ${vehicle.getMileage()}");
-//    }
-//  }
-// }
-//
-// abstract class Vehicle{
-//   String getMileage();
-//   String getVehicleName();
-// }
-// class Car extends Vehicle{
-//
-//   @override
-//   String getVehicleName() => "Car";
-//
-//   @override
-//   String getMileage() => "90 km/l";
-// }
-// class Truck extends Vehicle{
-//
-//   @override
-//   String getVehicleName() => "Truck";
-//
-//   @override
-//   String getMileage() => "40 km/l";
-// }

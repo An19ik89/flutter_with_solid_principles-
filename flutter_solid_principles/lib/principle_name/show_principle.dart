@@ -3,7 +3,7 @@ import 'package:flutter_solid_principles/principle_name/pricples_abstract.dart';
 
 
 class ShowPrincipleName{
-  showPrinciple(Principles principles){
+  showPrincipleName(Principles principles){
     return Text(principles.getPrinciplesName());
   }
 }
