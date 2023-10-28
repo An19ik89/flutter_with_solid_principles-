@@ -14,7 +14,7 @@ class _SingleResponsibilityPageState extends State<SingleResponsibilityPage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text("Single Responsibility"),
+          title: const Text("Single Principle"),
         ),
         body: SingleChildScrollView(
           physics: const AlwaysScrollableScrollPhysics(),

@@ -14,7 +14,7 @@ class _OpenCloseResponsibilityPageState extends State<OpenCloseResponsibilityPag
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const FittedBox(fit: BoxFit.contain,child: Text("Open Close Responsibility")),
+          title: const FittedBox(fit: BoxFit.contain,child: Text("Open Close Principle")),
         ),
         body: SingleChildScrollView(
           physics: const AlwaysScrollableScrollPhysics(),

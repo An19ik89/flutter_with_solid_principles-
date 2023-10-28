@@ -14,7 +14,7 @@ class _DependencyInversionResponsibilityPageState extends State<DependencyInvers
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const FittedBox(fit: BoxFit.contain,child: Text("Dependency Inversion Responsibility")),
+          title: const FittedBox(fit: BoxFit.contain,child: Text("Dependency Inversion Principle")),
         ),
         body: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
