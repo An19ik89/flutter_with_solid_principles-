@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_solid_principles/dependencyInversionResponsibility/bank.dart';
+import 'package:flutter_solid_principles/dependencyInversionResponsibility/customer.dart';
 
 class DependencyInversionResponsibilityPage extends StatefulWidget {
   const DependencyInversionResponsibilityPage({super.key});
@@ -9,8 +11,14 @@ class DependencyInversionResponsibilityPage extends StatefulWidget {
 }
 
 class _DependencyInversionResponsibilityPageState extends State<DependencyInversionResponsibilityPage> {
+
+  Bank bank = Bank();
+  Customer customer = Customer();
+
   @override
   Widget build(BuildContext context) {
+    bank.atmOperation();
+    customer.atmOperation();
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
